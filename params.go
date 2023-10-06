@@ -242,7 +242,8 @@ func coerceEmbed(io *ImageOptions, param interface{}) (err error) {
 
 func coerceStripMeta(io *ImageOptions, param interface{}) (err error) {
 	io.StripMetadata, err = coerceTypeBool(param)
-	io.IsDefinedField.StripMetadata = true
+	io.StripMetadata = false
+	io.IsDefinedField.StripMetadata = false
 	return err
 }
 
